@@ -20,7 +20,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/ImageToUrlCh"
+            android:id="@+id/imToUrlCh"
             android:layout_width="123dp"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -35,7 +35,7 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="49dp"
                 android:text="NomDuPersonnage"
                 android:textSize="18sp"

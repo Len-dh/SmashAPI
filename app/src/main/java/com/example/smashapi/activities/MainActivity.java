@@ -1,35 +1,64 @@
 package com.example.smashapi.activities;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.widget.Toast;
 
 import com.example.smashapi.R;
-import com.example.smashapi.adapters.RecyclerViewAdapter;
+import com.example.smashapi.adapters.MyAdapter;
 import com.example.smashapi.model.Fighters;
+import com.example.smashapi.model.MainController;
+import com.example.smashapi.model.OnClickListener;
+import com.google.gson.Gson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
+import java.io.Console;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private String URL_JSON = "https://gist.githubusercontent.com/aws1994/f583d54e5af8e56173492d3f60dd5ebf/raw/c7796ba51d5a0d37fc756cf0fd14e54434c547bc/anime.json";
-    private List<Fighters> lstfigthers = new ArrayList<>();
-    private RecyclerView myrv ;
+
+    private MainController controller;
+
+    private RecyclerView myRecyclerView;
+    private RecyclerView.Adapter myRecyclerAdapter;
+    private RecyclerView.LayoutManager myRecyclerLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        myRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+
+        controller = new MainController(this);
+        controller.onCreate();
 
 
+    }
 
+    public void showList(List<Fighters> list) {
+        //utilise un layout lineaire
+        myRecyclerLayout = new LinearLayoutManager(this);
+        myRecyclerView.setLayoutManager(myRecyclerLayout);
 
+        //specifie notre adaptateur
+        myRecyclerAdapter = new MyAdapter(list, new OnClickListener() {
+            @Override
+            public void onClickListener(Fighters fighters) {
+                // Create an Intent to start the second activity
+                Intent details = new Intent(MainActivity.this, Activity_details.class);
+                Gson gson = new Gson();
+                //passe en plus la console sur laquelle on se trouve
+                details.putExtra("fighters_key", gson.toJson(fighters));
+                // Start the new activity.
+                startActivity(details);
+            }
 
-
-
+        });
+        myRecyclerView.setAdapter(myRecyclerAdapter);
+    }
 }
 
 
