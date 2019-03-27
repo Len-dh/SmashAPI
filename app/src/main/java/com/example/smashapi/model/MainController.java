@@ -34,7 +34,7 @@ public class MainController {
 
     //instance RetroFit
     private static Retrofit retrofit;
-    private static final String BASE_URL = "https://github.com/Len-dh/";
+    private static final String BASE_URL = "https://github.com/Len-dh/FieldSmashJson/blob/master/";
     //adresse du serveur ou recuperer les donnees
 
     public static Retrofit getRetrofitInstance() {
