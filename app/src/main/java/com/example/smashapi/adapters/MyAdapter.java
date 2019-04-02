@@ -1,6 +1,5 @@
 package com.example.smashapi.adapters;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.smashapi.R;
 import com.example.smashapi.activities.DescriptionActivity;
-import com.example.smashapi.activities.MainActivity;
 import com.example.smashapi.model.Fighters;
 import com.example.smashapi.model.OnClickListener;
 import com.squareup.picasso.Picasso;
@@ -22,7 +20,6 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<Fighters> values;
-
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -37,7 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(View view) {
             super(view);
             layout = view;
-            tvname = view.findViewById(R.id.name);
+            tvname= view.findViewById(R.id.name);
             tvimageToUrl = view.findViewById(R.id.imToUrl);
 
 
@@ -76,24 +73,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new Intent(context, DescriptionActivity.class);
+                Intent intent = new  Intent(context, DescriptionActivity.class);
                 intent.putExtra("namec", fighters.getName());
                 intent.putExtra("descPer", fighters.getDescCharac());
                 intent.putExtra("serie", fighters.getSerie());
                 intent.putExtra("firstApp", fighters.getFirstApp());
                 intent.putExtra("tranking", fighters.getTiersRanking());
                 intent.putExtra("imch", fighters.getImageToUrl());
-
                 context.startActivity(intent);
-
-
             }
         });
 
-        Picasso.get().load(values.get(position).getImageToUrl()).resize(250, 250).into(holder.tvimageToUrl);
+        Picasso.get().load(values.get(position).getImageToUrl()).resize(50,25).into(holder.tvimageToUrl);
 
     }
-
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
