@@ -21,10 +21,8 @@
 
         <ImageView
             android:id="@+id/imToUrl"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/loading_shape" />
+            android:layout_width="136dp"
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:layout_width="107dp"
