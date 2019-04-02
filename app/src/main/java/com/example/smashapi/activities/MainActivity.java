@@ -44,19 +44,7 @@ public class MainActivity extends AppCompatActivity {
         myRecyclerView.setLayoutManager(myRecyclerLayout);
 
         //specifie notre adaptateur
-        myRecyclerAdapter = new MyAdapter(list, new OnClickListener() {
-            @Override
-            public void onClickListener(Fighters fighters) {
-                // Create an Intent to start the second activity
-                Intent details = new Intent(MainActivity.this, Activity_details.class);
-                Gson gson = new Gson();
-                //passe en plus la console sur laquelle on se trouve
-                details.putExtra("fighters_key", gson.toJson(fighters));
-                // Start the new activity.
-                startActivity(details);
-            }
-
-        });
+        myRecyclerAdapter = new MyAdapter(list);
         myRecyclerView.setAdapter(myRecyclerAdapter);
     }
 }

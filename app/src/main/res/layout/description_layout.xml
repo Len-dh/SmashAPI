@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imToUrlCh"
+        android:layout_width="143dp"
+        android:layout_height="190dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loading_shape"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:text="NomDuPersonnage"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:text="Série d'origine"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+
+        android:layout_width="113dp"
+        android:layout_height="82dp"
+        android:text="Classement au tiers compétision"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <TextView
+        android:layout_width="115dp"
+        android:layout_height="49dp"
+        android:text="Première Apparition"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/serie"
+        android:layout_width="136dp"
+        android:layout_height="49dp"
+        android:text="serie"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <TextView
+        android:id="@+id/firstApp"
+        android:layout_width="138dp"
+        android:layout_height="53dp"
+        android:text="firstapp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="177dp" />
+
+    <TextView
+        android:id="@+id/descCharac"
+        android:layout_width="366dp"
+        android:layout_height="246dp"
+        android:text="descch"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <TextView
+        android:id="@+id/tiersRanking"
+        android:layout_width="138dp"
+        android:layout_height="70dp"
+        android:text="tiers"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

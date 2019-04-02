@@ -20,7 +20,7 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imToUrlCh"
+            android:id="@+id/imToUrl"
             android:layout_width="123dp"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"

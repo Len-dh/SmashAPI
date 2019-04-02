@@ -1,6 +1,8 @@
 package com.example.smashapi.model;
 
-public class Fighters {
+import java.io.Serializable;
+
+public class Fighters implements Serializable {
 
     private String name;
     private String imageToUrl;
@@ -11,6 +13,10 @@ public class Fighters {
     private String tiersRanking;
 
 
+    public Fighters()
+    {
+
+    }
 
     public Fighters(String name, String imageToUrl, String serie, String firstApp, String descCharac, String imToUrlCh, String tiersRanking) {
         this.name = name;
