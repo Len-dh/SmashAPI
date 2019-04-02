@@ -29,7 +29,7 @@ public class DescriptionActivity extends Activity {
 
     private static final String TAG = "DescriptionActivity";
 
-   @Override
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.description_layout);
@@ -52,7 +52,7 @@ public class DescriptionActivity extends Activity {
         tvtiersRanking.setText(intent.getStringExtra("tranking"));
 
 
-        
+
     }
 
     public void openActivity3(View view) {

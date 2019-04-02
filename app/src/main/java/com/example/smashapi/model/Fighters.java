@@ -11,6 +11,8 @@ public class Fighters implements Serializable {
     private String descCharac;
     private String imToUrlCh;
     private String tiersRanking;
+    private String imaGif;
+
 
 
     public Fighters()
@@ -18,7 +20,7 @@ public class Fighters implements Serializable {
 
     }
 
-    public Fighters(String name, String imageToUrl, String serie, String firstApp, String descCharac, String imToUrlCh, String tiersRanking) {
+    public Fighters(String name, String imageToUrl, String serie, String firstApp, String descCharac, String imToUrlCh, String tiersRanking, String imaGif) {
         this.name = name;
         this.imageToUrl = imageToUrl;
         this.serie = serie;
@@ -26,6 +28,15 @@ public class Fighters implements Serializable {
         this.descCharac = descCharac;
         this.imToUrlCh = imToUrlCh;
         this.tiersRanking = tiersRanking;
+        this.imaGif = imaGif;
+    }
+
+    public String getImaGif() {
+        return imaGif;
+    }
+
+    public void setImaGif(String imaGif) {
+        this.imaGif = imaGif;
     }
 
     public String getName() {

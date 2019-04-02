@@ -37,7 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(View view) {
             super(view);
             layout = view;
-            tvname= view.findViewById(R.id.name);
+            tvname = view.findViewById(R.id.name);
             tvimageToUrl = view.findViewById(R.id.imToUrl);
 
 
@@ -52,7 +52,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     // Create new views (invoked by the layout manager)
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
+                                                     int viewType) {
         // create a new view
         LayoutInflater inflater = LayoutInflater.from(
                 parent.getContext());
@@ -76,7 +76,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                Intent intent = new  Intent(context, DescriptionActivity.class);
+                Intent intent = new Intent(context, DescriptionActivity.class);
                 intent.putExtra("namec", fighters.getName());
                 intent.putExtra("descPer", fighters.getDescCharac());
                 intent.putExtra("serie", fighters.getSerie());
@@ -87,14 +87,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                 context.startActivity(intent);
 
 
-
             }
         });
 
-        Picasso.get().load(values.get(position).getImageToUrl()).resize(250,250).into(holder.tvimageToUrl);
+        Picasso.get().load(values.get(position).getImageToUrl()).resize(250, 250).into(holder.tvimageToUrl);
 
     }
-
 
 
     // Return the size of your dataset (invoked by the layout manager)

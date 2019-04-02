@@ -35,10 +35,7 @@ public class Activity_details extends Activity {
         //recupere le GSON passer en entree et le retransforme en objet console
         String jsonFighters = getIntent().getStringExtra("fighter_key");
         Gson gson = new Gson();
-        Fighters fighter;
-        fighter = (Fighters) getIntent().getSerializableExtra("Char");
-        if(fighter!=null)
-            Log.i("fighterswin", " " + fighter.getName() + " " + fighter.getSerie());
+
 
 
         //actualise la vue en fonction des parametres
