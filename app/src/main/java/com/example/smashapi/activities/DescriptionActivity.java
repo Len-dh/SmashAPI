@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.example.smashapi.R;
 import com.squareup.picasso.Picasso;
 
@@ -23,8 +22,6 @@ public class DescriptionActivity extends Activity {
     public TextView tvdescCharac;
     public TextView tvtiersRanking;
     public View layout;
-    public ImageView imageGif;
-
 
 
     private static final String TAG = "DescriptionActivity";
@@ -53,16 +50,10 @@ public class DescriptionActivity extends Activity {
 
 
 
+
+
+
+
     }
-
-    public void openActivity3(View view) {
-        Intent intent = new Intent(this, ImageGif.class);
-        imageGif = (ImageView) findViewById(R.id.imgif);
-
-        startActivity(intent);
-    }
-
-
-
 
 }
