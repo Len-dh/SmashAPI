@@ -20,11 +20,9 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/ImageToUrlCh"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/loading_shape" />
+            android:id="@+id/imToUrl"
+            android:layout_width="136dp"
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:layout_width="107dp"
@@ -35,7 +33,7 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="49dp"
                 android:text="NomDuPersonnage"
                 android:textSize="18sp"
